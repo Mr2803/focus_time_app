@@ -17,13 +17,6 @@ export default function App() {
   const [focusSubject, setFocusSubject] = useState(null);
   const [focusHistory, setFocusHistory] = useState([]);
 
-  // useEffect(() => {
-  //   if (focusSubject) {
-  //     setFocusHistory([...focusHistory, focusSubject]);
-  //   }
-  //   console.log(focusHistory);
-  // }, [focusSubject]);
-
   const addFocusHistorySubjectWithStatus = (subject, status) => {
     setFocusHistory([
       ...focusHistory,
@@ -82,7 +75,7 @@ export default function App() {
           <FocusHistory focusHistory={focusHistory} onClear={onClear} />
         </View>
       )}
-      {/* <Text>{focusSubject}</Text> */}
+
       <StatusBar style="auto" />
     </View>
   );
